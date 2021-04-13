@@ -1,0 +1,1 @@
+{"processes":{"13e3afb3-de97-49bd-a367-7bbd30c4364d":{"parent":null,"children":["c9661a51-80e0-4c64-80da-e590870ad315"]},"c9661a51-80e0-4c64-80da-e590870ad315":{"parent":"13e3afb3-de97-49bd-a367-7bbd30c4364d","children":[]}},"files":{"/home/usuario/Pract7/src/Ingredient.ts":["c9661a51-80e0-4c64-80da-e590870ad315"]},"externalIds":{}}
