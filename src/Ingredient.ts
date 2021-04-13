@@ -1,7 +1,8 @@
 /**
  * Contiene los macronutrientes de un ingrediente.
  */
-enum macronutrients {carbohydrates, proteins, lipids}
+export enum macroNutrients {carbohydrates, proteins, lipids};
+export type nutrientValues = [macroNutrients, number];
 
 
 /**
@@ -18,7 +19,7 @@ export class Ingredient {
   private price_: number;
   private group_: string;
   private origin_: string;
-  private nutrients_: macronutrients;
+  private nutrients_: nutrientValues[];
 
   /** ********************************************************************** **/
 
@@ -31,7 +32,7 @@ export class Ingredient {
    * @param nutrients Cantidad de cada macronutriente.
    */
   constructor(name: string, price: number, group: string, origin: string,
-      nutrients: macronutrients) {
+      nutrients: nutrientValues[]) {
     this.name_ = name;
     this.price_ = price;
     this.group_ = group;
@@ -112,7 +113,7 @@ export class Ingredient {
   /**
    * Devuelve los nutrientes del alimento.
    */
-  public get nutrients(): macronutrients {
+  public get nutrients(): nutrientValues[] {
     return this.nutrients_;
   }
 
@@ -120,7 +121,7 @@ export class Ingredient {
    * Cambia los nutrientes del alimento.
    * @param newNutrients Nuevos nutrientes del alimento.
    */
-  public set nutrients(newNutrients: macronutrients) {
+  public set nutrients(newNutrients: nutrientValues[]) {
     this.nutrients_ = newNutrients;
   }
 }
