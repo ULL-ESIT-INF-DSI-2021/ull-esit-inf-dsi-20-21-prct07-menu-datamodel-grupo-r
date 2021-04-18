@@ -700,6 +700,18 @@ En cuanto a las funciones, se han realizado las siguientes:
 En esta práctica hemos diseñado e impementado un menú para cualquier restaurante. En cuanto al diseño del menú, tuvimos que empezar buscando los ingredientes de cada plato para poder crearlo, así mismo su composición nutricional y su precio correspondiente. Creamos varios menús predeterminados para luego tener la opción de que el consumidor crease el suyo propio. En cuanto al funcionamiento, tuvimos que usar *Inquirer.js*, que es una interfaz de línea de comandos integrable para *Node.js* y *lowdb*; fue una parte delicada de la práctica debido a que al usarlo por primera vez, se nos dificultó un poco más. Sin embargo, aprendimos a usar ambas cosas gratificantemente.
 
 
+## Bibliografia
+- [Práctica 7 - Modelo de datos de un sistema que permite el diseño de menús](https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/)
+- [Typedoc](https://typedoc.org/)
+- [Mocha](https://mochajs.org/) 
+- [Chai](https://www.chaijs.com/) 
+- [Typescript Documentación oficial](https://www.typescriptlang.org/)
+- [Github Action](https://github.com/features/actions)
+- [Inquirer.js](https://www.npmjs.com/package/inquirer)
+- [Github](https://github.com/)
+- [Pull Request](https://styde.net/pull-request-en-github/)
+
+
 
 
 
