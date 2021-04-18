@@ -1,5 +1,5 @@
 import { groupTypes, Ingredient, nutrientValues} from "../Ingredient";
-import { Plate, PlateType } from "../Plato/Plato";
+import { Plate, PlateType } from "../Plato";
 
 export class Menu {
 
