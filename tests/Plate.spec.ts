@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import 'mocha';
 import {expect} from 'chai';
 import {Ingredient, groupTypes} from '../src/Ingredient';
@@ -13,7 +12,7 @@ const auxNutrient = new MacroNutrients(172, 119.25, 82.25);
 const auxNutrient2 = new MacroNutrients(206.44, 191.41, 118.33);
 
 
-const chicken = new Ingredient("Pollo", 3.86, 200, "El Sauzal", groupTypes.Meat,
+const chicken = new Ingredient("Pollo", 3.86, 200, "Sauzal", groupTypes.Meat,
     chickenNutrients);
 const salmon = new Ingredient("Salmón", 7.5, 164, "La Laguna", groupTypes.Fish,
     salmonNutrients);
@@ -24,7 +23,8 @@ const apple = new Ingredient("Manzana", 1.64, 75, "Taco", groupTypes.Fruit,
 const chickenIngredients: Ingredient[] = [chicken, orange, apple];
 const chickenIngredients2: Ingredient[] = [chicken, orange, apple, salmon];
 
-const firstPlate = new Plate("Pollo con naranja y manzana", plateTypes.firstPlate, chickenIngredients);
+const firstPlate = new Plate("Pollo con naranja y manzana",
+    plateTypes.firstPlate, chickenIngredients);
 
 
 describe('Funcionamiento básico de la clase Plates.',
@@ -39,18 +39,20 @@ describe('Funcionamiento básico de la clase Plates.',
       });
 
       it('Se pueden modificar sus atributos.', () => {
-        firstPlate.name = "Pollo con naranja, manzana y salmon";
+        firstPlate.name = "Pollo con salmon";
         firstPlate.pushIngredients(salmon);
         firstPlate.type = plateTypes.secondPlate;
-        expect(firstPlate.name).to.be.deep.equal("Pollo con naranja, manzana y salmon");
+        expect(firstPlate.name).to.be.deep.equal("Pollo con salmon");
         expect(firstPlate.type).to.be.deep.equal(plateTypes.secondPlate);
         expect(firstPlate.ingredients).to.be.deep.equal(chickenIngredients2);
-        expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient2);
+        expect(firstPlate.nutritionalComposition).to.be.deep.equal(
+            auxNutrient2);
         expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
         expect(firstPlate.price).to.be.equal(21.875);
         firstPlate.ingredients = chickenIngredients;
         expect(firstPlate.ingredients).to.be.deep.equal(chickenIngredients);
-        expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient2);
+        expect(firstPlate.nutritionalComposition).to.be.deep.equal(
+            auxNutrient2);
         expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
         expect(firstPlate.price).to.be.equal(21.875);
         firstPlate.price = 32;
