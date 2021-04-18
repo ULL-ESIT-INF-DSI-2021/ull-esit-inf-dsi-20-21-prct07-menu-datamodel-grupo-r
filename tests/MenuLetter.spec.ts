@@ -1,8 +1,8 @@
-import 'mocha';
+/* import 'mocha';
 import {expect} from 'chai';
-import {Plate} from '../src/Plate';
-import {Menu} from '../src/Menu';
-import {MenuLetter} from '../src/MenuLetter';
+import {Plate} from '../src/models/Plate';
+import {Menu} from '../src/models/Menu';
+import {MenuLetter} from '../src/models/MenuLetter';
 
 
 const pollo = new Plate("Pollo con naranja y manzana",
@@ -30,14 +30,12 @@ describe('Funcionamiento básico de la clase MenuLetter.',
         menu.plates = [pollo, salad, dessert2];
         expect(menu.name).to.be.deep.equal("Menú 2");
         expect(menu.plates).to.be.deep.equal([pollo, salad, dessert2]);
-    
+
       });
 
-      
+
     });
 
-
-
-
+*/
 
 

@@ -17,6 +17,47 @@ export abstract class Command {
     this.command_ = command;
   }
 
+  /** ******************************************************************** **/
+
+  /**
+   * Devuelve el id del comando.
+   */
+  public get id(): number {
+    return this.id_;
+  }
+
+  /**
+   * Cambia el id del comando.
+   */
+  public set id(newId: number) {
+    this.id_ = newId;
+  }
+
+  /** ******************************************************************** **/
+
+  /**
+   * Devuelve el texto del comando.
+   */
+  public get command(): string {
+    return this.command_;
+  }
+
+  /**
+   * Cambia el texto del comando.
+   */
+  public set command(newCommand: string) {
+    this.command_ = newCommand;
+  }
+
+  /** ******************************************************************** **/
+
+  /**
+   * Imprime el comando.
+   */
+  public printCommand(): void {
+    console.log(`${this.command_}.`);
+  }
+
   /**
    * Ejecuta el comando.
    */
