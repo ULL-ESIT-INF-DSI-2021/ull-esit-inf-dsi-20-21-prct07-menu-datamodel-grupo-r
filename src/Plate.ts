@@ -3,6 +3,17 @@ import {MacroNutrients} from './MacroNutrients';
 
 
 /**
+ * Objeto de tipo plateTypes
+ */
+export enum plateTypes {
+  starter = 'Entrante',
+  firstPlate = 'Primer plato',
+  secondPlate = 'Segundo plato',
+  dessert = 'Postre'
+};
+
+
+/**
  * Implementa un plato con sus ingredientes y valores.
  * @var name_ Nombre del plato.
  * @var ingredients_ Ingredientes del plato.
@@ -12,6 +23,7 @@ import {MacroNutrients} from './MacroNutrients';
  */
 export class Plate {
   private name_: string;
+  private type_: plateTypes;
   private ingredients_: Ingredient[];
   private nutritionalComposition_: MacroNutrients;
   private predominantGroup_: groupTypes;
@@ -22,8 +34,9 @@ export class Plate {
    * @param name_plate Nombre del plato.
    * @param ingredients Vector de ingredientes.
    */
-  constructor(name: string, ingredients: Ingredient[]) {
+  constructor(name: string, type: plateTypes, ingredients: Ingredient[]) {
     this.name_ = name;
+    this.type_ = type;
     this.ingredients_ = ingredients;
     this.nutritionalComposition_ = this.calculateNutritionalValue();
     this.predominantGroup_ = this.calculatePredominantGroup();
@@ -44,6 +57,22 @@ export class Plate {
    */
   public set name(newName: string) {
     this.name_ = newName;
+  }
+
+  /** ******************************************************************** **/
+
+  /**
+   * Devuelve el nombre del plato.
+   */
+  public get type(): plateTypes {
+    return this.type_;
+  }
+
+  /**
+   * Cambia el nombre del plato.
+   */
+  public set type(newType: plateTypes) {
+    this.type_ = newType;
   }
 
   /** ******************************************************************** **/

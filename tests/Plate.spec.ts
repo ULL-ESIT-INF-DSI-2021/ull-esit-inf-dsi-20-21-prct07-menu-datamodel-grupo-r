@@ -3,7 +3,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {Ingredient, groupTypes} from '../src/Ingredient';
 import {MacroNutrients} from '../src/MacroNutrients';
-import {Plate} from '../src/Plate';
+import {Plate, plateTypes} from '../src/Plate';
 
 const chickenNutrients = new MacroNutrients(60, 40, 20);
 const salmonNutrients = new MacroNutrients(21, 44, 22);
@@ -24,7 +24,7 @@ const apple = new Ingredient("Manzana", 1.64, 75, "Taco", groupTypes.Fruit,
 const chickenIngredients: Ingredient[] = [chicken, orange, apple];
 const chickenIngredients2: Ingredient[] = [chicken, orange, apple, salmon];
 
-const firstPlate = new Plate("Pollo con naranja y manzana", chickenIngredients);
+const firstPlate = new Plate("Pollo con naranja y manzana", plateTypes.firstPlate, chickenIngredients);
 
 
 describe('Funcionamiento básico de la clase Plates.',
