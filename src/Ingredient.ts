@@ -4,10 +4,11 @@
 export enum macroNutrients {carbohydrates, proteins, lipids};
 export type nutrientValues = [macroNutrients, number];
 
+
 /**
- * Contiene los tipos de alimentos
+ * Contiene los grupos de alimentos.
  */
-export enum typeAliment {
+export enum groupTypes {
   Meat = 'Carne',
   Fish = 'Pescado',
   Eggs = 'Huevos',
@@ -21,6 +22,7 @@ export enum typeAliment {
   Fruit = 'Frutas'
 }
 
+
 /**
  * Implementa un ingrediente y almacena sus atributos básicos.
  * @var name_ Almacena el nombre del ingrediente.
@@ -33,11 +35,11 @@ export enum typeAliment {
 export class Ingredient {
   private name_: string;
   private price_: number;
-  private group_: typeAliment;
+  private group_: groupTypes;
   private origin_: string;
   private nutrients_: nutrientValues[];
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Construye el objeto y asigna a cada atributo su valor.
@@ -47,7 +49,7 @@ export class Ingredient {
    * @param origin Dirección de origen del alimento.
    * @param nutrients Cantidad de cada macronutriente.
    */
-  constructor(name: string, price: number, group: typeAliment, origin: string,
+  constructor(name: string, price: number, group: groupTypes, origin: string,
       nutrients: nutrientValues[]) {
     this.name_ = name;
     this.price_ = price;
@@ -56,7 +58,7 @@ export class Ingredient {
     this.nutrients_ = nutrients;
   }
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Devuelve el nombre del alimento.
@@ -73,7 +75,7 @@ export class Ingredient {
     this.name_ = newName;
   }
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Devuelve el precio del alimento.
@@ -90,12 +92,12 @@ export class Ingredient {
     this.price_ = newPrice;
   }
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Devuelve el grupo del alimento.
    */
-  public get group(): typeAliment {
+  public get group(): groupTypes {
     return this.group_;
   }
 
@@ -103,11 +105,11 @@ export class Ingredient {
    * Cambia el grupo del alimento.
    * @param newGroup Nuevo grupo del alimento.
    */
-  public set group(newGroup: typeAliment) {
+  public set group(newGroup: groupTypes) {
     this.group_ = newGroup;
   }
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Devuelve el origen del alimento.
@@ -124,7 +126,7 @@ export class Ingredient {
     this.origin_ = newOrigin;
   }
 
-  /** ********************************************************************** **/
+  /** ******************************************************************** **/
 
   /**
    * Devuelve los nutrientes del alimento.
