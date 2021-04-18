@@ -68,14 +68,14 @@ export class Menu {
   *Añade un plato
   */
   public addPlates(plate: Plate[]) {
-    Plate.push(plate);
+   // Plate.push(plate);
   }
   
   /**
   *elimina un plato
   */
   public removePlates(plate: Plate[]) {
-    splice(Plate.length, 1);
+    //splice(Plate.length, 1);
   }
 
 
