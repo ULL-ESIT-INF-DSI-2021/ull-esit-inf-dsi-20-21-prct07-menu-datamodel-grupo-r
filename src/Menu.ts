@@ -1,4 +1,4 @@
-import { groupTypes, Ingredient, nutrientValues} from "../Ingredient";
+import { groupTypes, Ingredient, nutrientValues} from "./Ingredient";
 import { Plate, PlateType } from "../Plato";
 
 export class Menu {

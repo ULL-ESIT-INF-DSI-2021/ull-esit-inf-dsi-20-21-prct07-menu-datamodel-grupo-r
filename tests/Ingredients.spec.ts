@@ -1,61 +1,37 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Ingredient, nutrientValues} from '../src/Ingredient';
-import {macroNutrients, groupTypes} from '../src/Ingredient';
+import {Ingredient, groupTypes} from '../src/Ingredient';
+import {MacroNutrients} from '../src/MacroNutrients';
 
-const values: nutrientValues[] = [[macroNutrients.carbohydrates, 70],
-  [macroNutrients.lipids, 20], [macroNutrients.proteins, 10]];
-const values2: nutrientValues[] = [[macroNutrients.carbohydrates, 50],
-  [macroNutrients.lipids, 35.6], [macroNutrients.proteins, 15]];
-
-const chicken = new Ingredient("Pollo", 3.86, groupTypes.Meat, "El Sauzal",
-    values);
+const nutrients = new MacroNutrients(60, 40, 20);
+const nutrients2 = new MacroNutrients(61, 41, 21);
+const chicken = new Ingredient("Pollo", 3.86, 200, "El Sauzal", groupTypes.Meat,
+    nutrients);
 
 
 describe('Funcionamiento básico de la clase Ingredients.',
     () => {
-      it('Se puede acceder a su nombre.', () => {
+      it('Se puede acceder a sus atributos.', () => {
         expect(chicken.name).to.be.deep.equal("Pollo");
-      });
-
-      it('Se puede acceder a su precio.', () => {
         expect(chicken.price).to.be.deep.equal(3.86);
-      });
-
-      it('Se puede acceder a su grupo.', () => {
-        expect(chicken.group).to.be.deep.equal("Carne");
-      });
-
-      it('Se puede acceder a su origen.', () => {
+        expect(chicken.amount).to.be.deep.equal(200);
         expect(chicken.origin).to.be.deep.equal("El Sauzal");
+        expect(chicken.group).to.be.deep.equal(groupTypes.Meat);
+        expect(chicken.nutrients).to.be.deep.equal(nutrients);
       });
 
-      it('Se puede acceder a sus nutrientes.', () => {
-        expect(chicken.nutrients).to.be.deep.equal(values);
-      });
-
-      it('Se puede modificar su nombre.', () => {
+      it('Se pueden modificar sus atributos.', () => {
         chicken.name = "Gallina";
-        expect(chicken.name).to.be.deep.equal("Gallina");
-      });
-
-      it('Se puede modificar su precio.', () => {
-        chicken.price = 2;
-        expect(chicken.price).to.be.deep.equal(2);
-      });
-
-      it('Se puede modificar su grupo.', () => {
-        chicken.group = groupTypes.Fish;
-        expect(chicken.group).to.be.deep.equal("Pescado");
-      });
-
-      it('Se puede modificar su origen.', () => {
+        chicken.price = 4.70;
+        chicken.amount = 30;
         chicken.origin = "La Laguna";
+        chicken.group = groupTypes.Eggs;
+        chicken.nutrients = nutrients2;
+        expect(chicken.name).to.be.deep.equal("Gallina");
+        expect(chicken.price).to.be.deep.equal(4.70);
+        expect(chicken.amount).to.be.deep.equal(30);
         expect(chicken.origin).to.be.deep.equal("La Laguna");
-      });
-
-      it('Se puede modificar sus nutrientes.', () => {
-        chicken.nutrients = values2;
-        expect(chicken.nutrients).to.be.deep.equal(values2);
+        expect(chicken.group).to.be.deep.equal(groupTypes.Eggs);
+        expect(chicken.nutrients).to.be.deep.equal(nutrients2);
       });
     });

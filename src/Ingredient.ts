@@ -1,12 +1,6 @@
+import {MacroNutrients} from './MacroNutrients';
 /**
- * Contiene los macronutrientes de un ingrediente.
- */
-export enum macroNutrients {carbohydrates, proteins, lipids};
-export type nutrientValues = [macroNutrients, number];
-
-
-/**
- * Contiene los grupos de alimentos.
+ * Contiene los grupos de ingredientes.
  */
 export enum groupTypes {
   Meat = 'Carne',
@@ -28,16 +22,17 @@ export enum groupTypes {
  * @var name_ Almacena el nombre del ingrediente.
  * @var price_ Almacena el precio del ingrediente.
  * @var group_ Almacena el grupo alimenticio del ingrediente.
- * @var origin_ Almacena la dirección de origen del alimento.
+ * @var origin_ Almacena la dirección de origen del ingrediente.
  * @var nutrients_ Almacena la cantidad de cada macronutriente. Su valor es en
  * kcl por cada 100gr.
  */
 export class Ingredient {
   private name_: string;
   private price_: number;
-  private group_: groupTypes;
+  private amount_: number;
   private origin_: string;
-  private nutrients_: nutrientValues[];
+  private group_: groupTypes;
+  private nutrients_: MacroNutrients;
 
   /** ******************************************************************** **/
 
@@ -46,13 +41,14 @@ export class Ingredient {
    * @param name Nombre del ingrediente.
    * @param price Precio del ingrediente.
    * @param group Grupo alimenticio del ingrediente.
-   * @param origin Dirección de origen del alimento.
+   * @param origin Dirección de origen del ingrediente.
    * @param nutrients Cantidad de cada macronutriente.
    */
-  constructor(name: string, price: number, group: groupTypes, origin: string,
-      nutrients: nutrientValues[]) {
+  constructor(name: string, price: number, amount: number, origin: string,
+      group: groupTypes, nutrients: MacroNutrients) {
     this.name_ = name;
     this.price_ = price;
+    this.amount_ = amount;
     this.group_ = group;
     this.origin_ = origin;
     this.nutrients_ = nutrients;
@@ -61,15 +57,15 @@ export class Ingredient {
   /** ******************************************************************** **/
 
   /**
-   * Devuelve el nombre del alimento.
+   * Devuelve el nombre del ingrediente.
    */
   public get name(): string {
     return this.name_;
   }
 
   /**
-   * Cambia el nombre del alimento.
-   * @param newName Nuevo nombre del alimento.
+   * Cambia el nombre del ingrediente.
+   * @param newName Nuevo nombre del ingrediente.
    */
   public set name(newName: string) {
     this.name_ = newName;
@@ -78,15 +74,15 @@ export class Ingredient {
   /** ******************************************************************** **/
 
   /**
-   * Devuelve el precio del alimento.
+   * Devuelve el precio del ingrediente.
    */
   public get price(): number {
     return this.price_;
   }
 
   /**
-   * Cambia el precio del alimento.
-   * @param newPrice Nuevo precio del alimento.
+   * Cambia el precio del ingrediente.
+   * @param newPrice Nuevo precio del ingrediente.
    */
   public set price(newPrice: number) {
     this.price_ = newPrice;
@@ -95,32 +91,32 @@ export class Ingredient {
   /** ******************************************************************** **/
 
   /**
-   * Devuelve el grupo del alimento.
+   * Devuelve la cantidad de ingrediente.
    */
-  public get group(): groupTypes {
-    return this.group_;
+  public get amount(): number {
+    return this.amount_;
   }
 
   /**
-   * Cambia el grupo del alimento.
-   * @param newGroup Nuevo grupo del alimento.
+   * Cambia la cantidad de ingrediente.
+   * @param newAmount Nuevo precio del ingrediente.
    */
-  public set group(newGroup: groupTypes) {
-    this.group_ = newGroup;
+  public set amount(newAmount: number) {
+    this.amount_ = newAmount;
   }
 
   /** ******************************************************************** **/
 
   /**
-   * Devuelve el origen del alimento.
+   * Devuelve el origen del ingrediente.
    */
   public get origin(): string {
     return this.origin_;
   }
 
   /**
-   * Cambia el origen del alimento.
-   * @param newOrigin Nuevo origen del alimento.
+   * Cambia el origen del ingrediente.
+   * @param newOrigin Nuevo origen del ingrediente.
    */
   public set origin(newOrigin: string) {
     this.origin_ = newOrigin;
@@ -129,17 +125,34 @@ export class Ingredient {
   /** ******************************************************************** **/
 
   /**
-   * Devuelve los nutrientes del alimento.
+   * Devuelve el grupo del ingrediente.
    */
-  public get nutrients(): nutrientValues[] {
+  public get group(): groupTypes {
+    return this.group_;
+  }
+
+  /**
+   * Cambia el grupo del ingrediente.
+   * @param newGroup Nuevo grupo del ingrediente.
+   */
+  public set group(newGroup: groupTypes) {
+    this.group_ = newGroup;
+  }
+
+  /** ******************************************************************** **/
+
+  /**
+   * Devuelve los nutrientes del ingrediente.
+   */
+  public get nutrients(): MacroNutrients {
     return this.nutrients_;
   }
 
   /**
-   * Cambia los nutrientes del alimento.
-   * @param newNutrients Nuevos nutrientes del alimento.
+   * Cambia los nutrientes del ingrediente.
+   * @param newNutrients Nuevos nutrientes del ingrediente.
    */
-  public set nutrients(newNutrients: nutrientValues[]) {
+  public set nutrients(newNutrients: MacroNutrients) {
     this.nutrients_ = newNutrients;
   }
 }

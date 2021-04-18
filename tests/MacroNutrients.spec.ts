@@ -12,7 +12,7 @@ describe('Funcionamiento básico de la clase MacroNutrients.',
         expect(nutrients.lipids).to.be.deep.equal(13);
       });
 
-      it('Se puede modificar sus atributos.', () => {
+      it('Se pueden modificar sus atributos.', () => {
         nutrients.carbohydrates = 50;
         nutrients.proteins = 40;
         nutrients.lipids = 30;
