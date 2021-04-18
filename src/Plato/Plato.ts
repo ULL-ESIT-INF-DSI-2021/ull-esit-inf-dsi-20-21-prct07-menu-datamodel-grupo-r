@@ -1,4 +1,4 @@
-import { typeAliment, nutrientValues, Ingredient} from "../Ingredient.ts";
+import { groupTypes, nutrientValues, Ingredient} from "../Ingredient.ts";
 
 
 /**
@@ -66,10 +66,17 @@ export class Plate {
 
  /**
    * Get del atributo type_aliments
-   * @returns un objeto set con typeAliment
+   * @returns un objeto set con 
+   
+   
+   
+   
+   
+   
+   ment
    */
-  get_type_Aliments(): typeAliment[] {
-    return [...new Set<typeAliment>(this.ingredients.map((ingredient) => ingredient.get_Food().get_type_Alimentos()))];
+  get_type_Aliments(): groupTypes[] {
+    return [...new Set<groupTypes>(this.ingredients.map((ingredient) => ingredient.get_Food().get_type_Alimentos()))];
   }
 
 
@@ -91,19 +98,19 @@ export class Plate {
    * Get del grupo que mas aparece
    * @returns 
    */
-  get_most_appears_Aliment(): typeAliment {
-    const counter = new Map<typeAliment, number>();
+  get_most_appears_Aliment(): groupTypes {
+    const counter = new Map<groupTypes, number>();
 
     this.ingredients.forEach((ingredient) => {
-      const typeAliment = ingredient.get_Food().get_type_Aliment();
-      if (counter.has(typeAliment)) {
-        counter.set(typeAliment, counter.get(typeAliment) as number + 1);
+      const groupTypes = ingredient.get_Food().get_type_Aliment();
+      if (counter.has(groupTypes)) {
+        counter.set(groupTypes, counter.get(groupTypes) as number + 1);
       } else {
-        counter.set(typeAliment, 0);
+        counter.set(groupTypes, 0);
       }
     });
 
-    let result : typeAliment = [...counter.keys()][0];
+    let result : groupTypes = [...counter.keys()][0];
     let moreAppearances = [...counter.values()][0];
     counter.forEach((appearances, group) => {
       if (appearances > moreAppearances) {
