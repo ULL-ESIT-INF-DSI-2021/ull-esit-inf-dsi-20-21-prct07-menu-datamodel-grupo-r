@@ -4,7 +4,10 @@ import FileSync from 'lowdb/adapters/FileSync';
 import write from 'lowdb/adapters/FileSync';
 import {CustomerFunctions} from './CustomerFunctions';
 import {ChefFunctions} from './ChefFunctions';
+import {Menu} from './models/Menu';
+import {Plate} from './models/Plate';
 
+export const pedido: (Menu | Plate)[] = [];
 const customer = new CustomerFunctions();
 const chef = new ChefFunctions();
 
