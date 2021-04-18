@@ -1,5 +1,6 @@
 import {groupTypes, Ingredient} from './models/Ingredient';
 import {MacroNutrients} from './models/MacroNutrients';
+import {Menu} from './models/Menu';
 
 // alimentos segundo plato
 export const rice = new Ingredient("Arroz", 2, 300, "La Laguna",
@@ -66,7 +67,7 @@ export const gelatina = new Ingredient("Gelatina", 2, 300, "La Laguna",
 export const quesillo = new Ingredient("Quesillo", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(195, 8, 55.8));
 
-//menus
+// menus
 export const menu1 = new Menu("Menu1", entrante, primerplato, "Albondiga", "Tiramisu");
 export const menu2 = new Menu("Menu2", entrante, primerplato, "Carne", "sorbeteLimon");
 export const menu3 = new Menu("Menu3", entrante, primerplato, "Pollo", "Gelatina");

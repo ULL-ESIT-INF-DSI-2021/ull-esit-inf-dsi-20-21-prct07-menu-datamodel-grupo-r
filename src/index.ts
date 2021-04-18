@@ -2,8 +2,8 @@ import inquirer from 'inquirer';
 import low from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 import write from 'lowdb/adapters/FileSync';
-import {CustomerFunctions} from './CustomerFunctions';
-import {ChefFunctions} from './ChefFunctions';
+import {CustomerFunctions} from './models/CustomerFunctions';
+import {ChefFunctions} from './models/ChefFunctions';
 import {Menu} from './models/Menu';
 import {Plate} from './models/Plate';
 
