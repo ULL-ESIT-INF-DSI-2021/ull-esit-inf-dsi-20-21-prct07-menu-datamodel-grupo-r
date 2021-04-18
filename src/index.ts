@@ -1,13 +1,6 @@
-import {write} from 'lowdb/adapters/FileSync';
+import inquirer from 'inquirer';
 import low from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
-import {MenuLetter} from './models/MenuLetter';
-import {createDatabase, getDatabase} from './Database';
+import write from 'lowdb/adapters/FileSync';
+import CommandCollection from './models/CommandCollection';
 
-createDatabase();
-
-getDatabase().defaults({menus: []}).write();
-
-const letter = new MenuLetter([], []);
-
-getDatabase().get('menus').push(letter).write();

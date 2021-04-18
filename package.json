@@ -22,6 +22,7 @@
   "homepage": "https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r#readme",
   "devDependencies": {
     "@types/chai": "^4.2.16",
+    "@types/inquirer": "^7.3.1",
     "@types/lowdb": "^1.0.9",
     "@types/mocha": "^8.2.2",
     "@types/node": "^14.14.41",
