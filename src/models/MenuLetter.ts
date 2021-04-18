@@ -37,6 +37,22 @@ export class MenuLetter {
     this.plates_ = newPlates;
   }
 
+  /**
+   * Añade al vector Plates un nuevo plato
+   * @param newPlate 
+   */
+  public pushPlates(newPlate: Plate){
+    this.plates_.push(newPlate);
+  }
+
+  /**
+   * Elimina del vector Plates el ultimo objeto introducido
+   */
+  public popPlates(){
+    this.plates_.pop();
+  }
+
+
   /** ******************************************************************** **/
 
   /**
@@ -53,15 +69,18 @@ export class MenuLetter {
     this.menus_ = newMenus;
   }
 
+  /**
+   * Añade al vector Menu un nuevo menu
+   * @param newPlate 
+   */
+   public pushMenu(newMenu: Menu){
+    this.menus_.push(newMenu);
+  }
 
   /**
-   * Imprime el plato.
+   * Elimina del vector Menu el ultimo objeto introducido
    */
-  public print() {
-    console.log('Platos:');
-    this.plates_.forEach((plate) => plate.print());
-
-    console.log('Menúes:');
-    this.menus_.forEach((menu) => menu.print());
+  public popMenu(){
+    this.menus_.pop();
   }
 }
