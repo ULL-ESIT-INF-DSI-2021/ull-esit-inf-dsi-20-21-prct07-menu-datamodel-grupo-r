@@ -19,7 +19,7 @@ export const tomate = new Ingredient("Tomates aliñados", 4, 260, "La Laguna",
 
 //alimentos primer plato
 export const garbanzos = new Ingredient("Garbanzos", 4, 260, "La Laguna",
-    groupTypes.Meat.Legumes.Vegetables, new MacroNutrients(18, 60, 10));
+    groupTypes.Vegetables, new MacroNutrients(18, 60, 10));
 
 export const sopa1 = new Ingredient("Sopa de verduras", 4, 310, "La Laguna",
     groupTypes.Vegetables.Cereal, new MacroNutrients(12, 49, 15));

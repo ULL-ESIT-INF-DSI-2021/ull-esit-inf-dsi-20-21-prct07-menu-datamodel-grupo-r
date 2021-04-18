@@ -181,4 +181,14 @@ export class Plate {
     });
     return price;
   }
+
+  /**
+   * Imprime el plato.
+   */
+  public print() {
+    console.log(`${this.name_}: `);
+    this.ingredients.forEach((ingredient) => {
+      console.log(`${ingredient.name} `);
+    });
+  }
 };

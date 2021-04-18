@@ -129,4 +129,13 @@ export class Menu {
     });
     return price;
   }
+
+
+  /**
+   * Imprime el plato.
+   */
+  public print() {
+    console.log(`${this.name_}: `);
+    this.plates_.forEach((plate) => plate.print());
+  }
 };

@@ -1,4 +1,5 @@
 import inquirer from 'inquirer';
+import {carta} from '../index';
 
 /**
  * Comandos del cliente
@@ -33,11 +34,12 @@ export class CustomerFunctions {
    */
   public async customerShowLetter() {
     console.clear();
+    carta.print();
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      choices: Object.values(CustomerCommands),
     });
   }
 
@@ -50,7 +52,7 @@ export class CustomerFunctions {
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -63,7 +65,7 @@ export class CustomerFunctions {
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -76,7 +78,7 @@ export class CustomerFunctions {
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -89,7 +91,7 @@ export class CustomerFunctions {
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -102,7 +104,7 @@ export class CustomerFunctions {
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      // choices: Object.values(CustomerCommands),
     });
   }
 

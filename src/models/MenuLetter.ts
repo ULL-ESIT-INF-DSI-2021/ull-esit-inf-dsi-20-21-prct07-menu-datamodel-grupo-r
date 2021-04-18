@@ -52,4 +52,16 @@ export class MenuLetter {
   public set menus(newMenus: Menu[]) {
     this.menus_ = newMenus;
   }
+
+  
+  /**
+   * Imprime el plato.
+   */
+  public print() {
+    console.log('Platos:');
+    this.plates_.forEach((plate) => plate.print());
+    
+    console.log('Menúes:');
+    this.menus_.forEach((menu) => menu.print());
+  }
 }
