@@ -186,9 +186,7 @@ export class Plate {
    * Imprime el plato.
    */
   public print() {
-    console.log(`${this.name_}: `);
-    this.ingredients.forEach((ingredient) => {
-      console.log(`${ingredient.name} `);
-    });
+    console.log(`${this.name_}`);
   }
 };
+
