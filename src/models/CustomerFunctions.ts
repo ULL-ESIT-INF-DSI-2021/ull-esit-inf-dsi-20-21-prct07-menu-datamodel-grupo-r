@@ -92,7 +92,7 @@ export class CustomerFunctions {
    */
   public async customerShowLetter() {
     console.clear();
-    carta.print();
+    // carta.print();
     inquirer.prompt({
       type: 'input',
       name: 'continue',
@@ -175,34 +175,34 @@ export class CustomerFunctions {
 
     switch (answers["command"]) {
       case SelectPlate.plato1: {
-        pedido.push(data.plato1);
+        pedido.push(data.tapaBoquerones);
       }
       case SelectPlate.plato2: {
-        pedido.push(data.plato2);
+        pedido.push(data.sopaVerduras);
       }
       case SelectPlate.plato3: {
-        pedido.push(data.plato3);
+        pedido.push(data.tapaQuesos);
       }
       case SelectPlate.plato4: {
-        pedido.push(data.plato4);
+        pedido.push(data.racionPollo);
       }
       case SelectPlate.plato5: {
-        pedido.push(data.plato5);
+        pedido.push(data.sopaPescado);
       }
       case SelectPlate.plato6: {
-        pedido.push(data.plato6);
+        pedido.push(data.racionTernera);
       }
       case SelectPlate.plato7: {
-        pedido.push(data.plato7);
+        pedido.push(data.Potaje);
       }
       case SelectPlate.plato8: {
-        pedido.push(data.plato8);
+        pedido.push(data.racionConejo);
       }
       case SelectPlate.plato9: {
-        pedido.push(data.plato9);
+        pedido.push(data.racionPasta);
       }
       case SelectPlate.plato10: {
-        pedido.push(data.plato10);
+        pedido.push(data.tapaSerrano);
       }
     }
     this.promptCustomer();

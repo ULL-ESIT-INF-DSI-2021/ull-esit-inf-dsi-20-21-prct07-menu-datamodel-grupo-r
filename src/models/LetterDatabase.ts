@@ -29,7 +29,6 @@ export class LetterDatabase extends MenuLetter {
   }
 
   public addMenu(menu: Menu) {
-    
   }
 }
 

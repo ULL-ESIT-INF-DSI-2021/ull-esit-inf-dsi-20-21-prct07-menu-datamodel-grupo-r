@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 import {groupTypes, Ingredient} from './models/Ingredient';
 import {MacroNutrients} from './models/MacroNutrients';
 import {Menu} from './models/Menu';
-import { Plate, plateTypes } from './models/Plate';
+import {Plate, plateTypes} from './models/Plate';
 
 // Entrantes
 
@@ -180,7 +181,7 @@ export const racionGazpacho = new Plate("Gazpacho", plateTypes.firstPlate, [gazp
 export const racionQuinoa = new Plate("Quinoa", plateTypes.secondPlate, [quinoa]);
 export const porcionMouse = new Plate("Mouse Chocolate", plateTypes.dessert, [mouseChocolate]);
 
-//menus
+// menus
 export const menu1 = new Menu("Menu 1", [tapaBoquerones, sopaVerduras, racionAlbondigas, porcionTiramisu]);
 export const menu2 = new Menu("Menu2", [tapaQuesos, sopaPescado, racionPollo, porcionSorbete]);
 export const menu3 = new Menu("Menu3", [tapaAlmogrote, sopaPollo, racionTernera, porcionGelatina]);

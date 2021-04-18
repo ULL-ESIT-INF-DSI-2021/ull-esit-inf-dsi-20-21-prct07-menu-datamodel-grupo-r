@@ -12,16 +12,16 @@ import * as data from './exampleData';
 export const pedido: (Menu | Plate)[] = [];
 export const carta: MenuLetter = new MenuLetter(
     [
-      data.plato1,
-      data.plato2,
-      data.plato3,
-      data.plato4,
-      data.plato5,
-      data.plato6,
-      data.plato7,
-      data.plato8,
-      data.plato9,
-      data.plato10,
+      data.tapaBoquerones,
+      data.sopaVerduras,
+      data.tapaQuesos,
+      data.racionPollo,
+      data.sopaPescado,
+      data.racionTernera,
+      data.Potaje,
+      data.racionConejo,
+      data.racionPasta,
+      data.tapaSerrano,
     ],
     [
       data.menu1,
