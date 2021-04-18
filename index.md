@@ -484,6 +484,7 @@ Después se realizan los correspondientes *getters y setters* de los atributos d
 
 ```
 import inquirer from 'inquirer';
+import {carta} from '../index';
 
 enum CustomerCommands {
   showLetter = "Mostrar carta",
@@ -497,7 +498,7 @@ enum CustomerCommands {
 
 
 export class CustomerFunctions {
- 
+
   public async promptCustomer() {
     console.clear();
     const answers = await inquirer.prompt({
@@ -510,11 +511,12 @@ export class CustomerFunctions {
 
   public async customerShowLetter() {
     console.clear();
+    carta.print();
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
       message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      choices: Object.values(CustomerCommands),
     });
   }
 
@@ -523,8 +525,8 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      message: 'Añadir menú al pedido',
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -533,18 +535,18 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      message: 'Eliminar menú del pedido',
+      // choices: Object.values(CustomerCommands),
     });
   }
-
+  
   public async customerAddPlate() {
     console.clear();
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      message: 'Añadir plato al pedido',
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -553,8 +555,8 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      message: 'Remover plato del pedido',
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -563,8 +565,8 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
-      // choices: Object.values(chefCommands),
+      message: 'Mostrando el pedido',
+      // choices: Object.values(CustomerCommands),
     });
   }
 
@@ -693,9 +695,9 @@ En cuanto a las funciones, se han realizado las siguientes:
 * chefExit: Función publica asincrona del chef para salir.
 
 
+## Conclusiones
 
-
-
+En esta práctica hemos diseñado e impementado un menú para cualquier restaurante. En cuanto al diseño del menú, tuvimos que empezar buscando los ingredientes de cada plato para poder crearlo, así mismo su composición nutricional y su precio correspondiente. Creamos varios menús predeterminados para luego tener la opción de que el consumidor crease el suyo propio. En cuanto al funcionamiento, tuvimos que usar *Inquirer.js*, que es una interfaz de línea de comandos integrable para *Node.js* y *lowdb*; fue una parte delicada de la práctica debido a que al usarlo por primera vez, se nos dificultó un poco más. Sin embargo, aprendimos a usar ambas cosas gratificantemente.
 
 
 
