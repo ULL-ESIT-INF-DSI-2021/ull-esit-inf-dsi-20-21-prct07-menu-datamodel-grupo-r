@@ -51,7 +51,7 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
+      message: 'Añadir menú al pedido',
       // choices: Object.values(CustomerCommands),
     });
   }
@@ -64,7 +64,7 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
+      message: 'Eliminar menú del pedido',
       // choices: Object.values(CustomerCommands),
     });
   }
@@ -77,7 +77,7 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
+      message: 'Añadir plato al pedido',
       // choices: Object.values(CustomerCommands),
     });
   }
@@ -90,7 +90,7 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
+      message: 'Remover plato del pedido',
       // choices: Object.values(CustomerCommands),
     });
   }
@@ -103,7 +103,7 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Comandos del chef',
+      message: 'Mostrando el pedido',
       // choices: Object.values(CustomerCommands),
     });
   }
