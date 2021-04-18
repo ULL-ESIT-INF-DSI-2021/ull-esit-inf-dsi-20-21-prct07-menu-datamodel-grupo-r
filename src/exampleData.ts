@@ -1,8 +1,9 @@
 import {groupTypes, Ingredient} from './models/Ingredient';
 import {MacroNutrients} from './models/MacroNutrients';
 import {Menu} from './models/Menu';
+import { Plate} from './models/Plate';
 
-// Entrantes
+//Entrantes
 
 
 export const pan = new Ingredient("Pan", 2, 260, "La Esperanza",
@@ -29,13 +30,14 @@ export const mantequilla = new Ingredient("Mantequilla", 2, 39, "Asturias",
 export const alioli = new Ingredient("alioli", 2.6, 120, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(28, 87, 24));
 
-export const jamon = new Ingredient("Jamon Serrano", 2, 300, "Extremadura",
+export const jamonserrano = new Ingredient("Jamon Serrano", 2, 300, "Extremadura",
     groupTypes.Vegetables, new MacroNutrients(57, 9, 18.1));
 
 export const tomate = new Ingredient("Tomates aliñados", 4, 260, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(10, 48, 7));
 
-// alimentos primer plato
+
+//alimentos primer plato
 export const garbanzos = new Ingredient("Garbanzos", 4, 260, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(18, 60, 10));
 
@@ -43,7 +45,7 @@ export const sopa1 = new Ingredient("Sopa de verduras", 4, 310, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(12, 49, 15));
 
 export const sopa2 = new Ingredient("Sopa de pescado", 6, 310, "La Laguna",
-    groupTypes.Vegetables, new MacroNutrients(1, 16, 2.5));
+    groupTypes.Fish, new MacroNutrients(1, 16, 2.5));
 
 export const sopa3 = new Ingredient("Sopa de pollo", 5, 310, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(15, 30, 60));
@@ -60,10 +62,10 @@ export const potaje = new Ingredient("Potaje", 5, 310, "La Laguna",
 export const salmorejo = new Ingredient("Salmorejo", 4, 260, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(12, 13, 9));
 
-export const ensalada2 = new Ingredient("Ensalada pasta", 6, 310, "La Laguna",
+export const ensalada2 = new Ingredient("Ensalada de pasta", 6, 310, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(27, 26, 16));
 
-export const ensalada3 = new Ingredient("Ensalada aguacate", 6, 310, "Laguna",
+export const ensalada3 = new Ingredient("Ensalada de aguacate", 6, 310, "La Laguna",
     groupTypes.Vegetables, new MacroNutrients(27, 26, 16));
 
 // alimentos segundo plato
@@ -100,11 +102,11 @@ export const calabacin = new Ingredient("Calabacin", 2, 300, "Almeria",
 export const pescado = new Ingredient("Pescado", 2, 300, "Candelaria",
     groupTypes.Meat, new MacroNutrients(14, 19, 6.4));
 
-// postres
+//postres
 export const mouseChocolate = new Ingredient("Mouse", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(200, 5, 60.3));
 
-export const principe = new Ingredient("principe", 2, 300, "La Laguna",
+export const principeAlberto = new Ingredient("PrincipeAlberto", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(210, 4, 55.4));
 
 export const tiramisu = new Ingredient("Tiramisu", 2, 300, "La Laguna",
@@ -131,7 +133,7 @@ export const gelatina = new Ingredient("Gelatina", 2, 300, "La Laguna",
 export const quesillo = new Ingredient("Quesillo", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(195, 8, 55.8));
 
-// menus
+//menus
 
 export const menu1 = new Menu("Menu1", [boqueron, sopa1, albondigas, tiramisu]);
 export const menu2 = new Menu("Menu2", [queso, sopa2, chicken, sorbete]);
