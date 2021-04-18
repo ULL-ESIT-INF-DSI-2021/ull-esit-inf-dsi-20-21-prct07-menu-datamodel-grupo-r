@@ -40,7 +40,7 @@ Supongamos que el sistema que estamos diseñando se empleará en un restaurante.
 Para ver el informe completo, pinche [aquí](https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/)
 
 ## Clase Ingredient
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/Ingredient.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/Ingredient.ts)
 
 [Pruebas Unitarias](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/tests/Ingredients.spec.ts)
 
@@ -134,7 +134,7 @@ Durante esta práctica vamos a crear una clase que creará los objetos según el
 
 ## Clase MacroNutrients
 
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/MacroNutrients.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/MacroNutrients.ts)
 
 [Pruebas unitarias](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/tests/MacroNutrients.spec.ts)
 
@@ -181,7 +181,7 @@ En esta clase se almacenan los macronutrientes de cada alimento en kilocalorias 
 
 ## Clase Menu
 
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/Menu.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/Menu.ts)
 
 [Pruebas unitarias](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/tests/Menu.spec.ts)
 
@@ -293,7 +293,7 @@ Para ello, se han creado las siguientes funciones:
 
 ## Clase MenuLetters
 
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/MenuLetter.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/MenuLetter.ts)
 
 [Pruebas unitarias](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/tests/MenuLetter.spec.ts)
 
@@ -333,7 +333,7 @@ El funcionamiento principal de esta clase es el de contener la carta de un resta
 
 ## Clase Plate
 
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/Plate.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/Plate.ts)
 
 [Pruebas unitarias](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/tests/Plate.spec.ts)
 
