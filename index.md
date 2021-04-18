@@ -476,20 +476,233 @@ Después se realizan los correspondientes *getters y setters* de los atributos d
 * calculatePrice: Funcion privada que calcula el precio en euros de cada plato.
 
 
-## Clase Command
+## Clase CustomerFunctions
 
-[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/Command.ts)
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/CustomerFunctions.ts)
 
 [Pruebas unitarias]()
 
 ```
+import inquirer from 'inquirer';
 
+enum CustomerCommands {
+  showLetter = "Mostrar carta",
+  addMenu = "Añadir menú",
+  removeMenu = "Eliminar menú",
+  addPlate = "Añadir plato",
+  removePlate = "Eliminar plato",
+  showCommand = "Mostrar pedido",
+  exit = "Salir",
+}
+
+
+export class CustomerFunctions {
+ 
+  public async promptCustomer() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Bienvenido a nuestro restaurante',
+      choices: Object.values(CustomerCommands),
+    });
+  }
+
+  public async customerShowLetter() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerAddMenu() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerRemoveMenu() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerAddPlate() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerRemovePlate() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerShowCommand() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async customerExit() {
+    console.log(`Vuelva pronto`);
+  }
+}
 ```
 
-La clase abstracta *Command* implementa los comandos disponibles en la aplicación, teniendo como atributos privados;
+La clase *CoustomerFunctions* muestra el menú a los clientes. En primer lugar, tenemos un *enum* llamdo *customerCommands*, donde tenemos todos los comandos del cliente ordenados. Dentro de la clase, se realizan las siguientes funciones:
 
-* id_: de tipo *number*.
-* command_: de tipo *string*.
+* prompCustomer: Función publica asincrona que muestra el menú del cliente.
+* customerShowLetter: función publica asincrona que muestra la carta al cliente.
+* customerAddMenu: Función publica asincrona del cliente que añade un menú.
+* customerRemoveMenu: Función publica asincrona del cliente para eliminar un menú.
+* customerAddPlate: Función publica asincrona del cliente para añadir un plato.
+* customerRemovePlate: Función publica asincrona del cliente para eliminar un plato.
+* customerShowCommand: Función publica asincrona del cliente para mostrar el pedido.
+* customerExit: Función publica asincrona del cliente para salir.
+
+
+## Clase ChefFunctions
+
+[Código resuelto](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct07-menu-datamodel-grupo-r/blob/main/src/models/ChefFunctions.ts)
+
+[Pruebas unitarias]()
+
+```
+import inquirer from 'inquirer';
+
+ enum ChefCommands {
+  addMenu = "Añadir menú",
+  removeMenu = "Eliminar menú",
+  addPlate = "Añadir plato",
+  removePlate = "Eliminar plato",
+  showLetter = "Mostrar la carta",
+  exit = "Salir"
+}
+
+
+export class ChefFunctions {
+
+  public async promptChef() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Bienvenido a nuestro restaurante',
+      choices: Object.values(ChefCommands),
+    });
+  }
+
+  public async chefShowLetter() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async chefAddMenu() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async chefRemoveMenu() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async chefAddPlate() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async chefRemovePlate() {
+    console.clear();
+    const answers = await inquirer.prompt({
+      type: 'list',
+      name: 'command',
+      message: 'Comandos del chef',
+      // choices: Object.values(chefCommands),
+    });
+  }
+
+  public async chefExit() {
+    console.log(`Vuelva pronto`);
+  }
+}
+```
+
+La clase *ChefFunctions* realiza la función de mostrar el menú del chef. En primer lugar, tenemos un *enum* llamado *ChefCommands* donde tendremos lo siguiente:
+
+* añadir menú.
+* eliminar menú.
+* añadir plato.
+* eliminar plato.
+* mostrar carta.
+* salir.
+
+En cuanto a las funciones, se han realizado las siguientes:
+
+* promptChef: Función publica asincrona del chef que muestra el menu del chef.
+* chefShowLetter: Función publica asincrona del chef que muestra la carta.
+* chefAddMenu: Función publica asincrona del chef para añadir un menu.
+* chefRemoveMenu: Función publica asincrona del chef para eliminar un menu.
+* chefAddPlate: Función publica asincrona del chef para añadir un plato.
+* chefRemovePlate: Función publica asincrona del chef para eliminar un plato.
+* chefExit: Función publica asincrona del chef para salir.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
