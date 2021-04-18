@@ -3,17 +3,12 @@ import {MacroNutrients} from './MacroNutrients';
 
 
 /**
- * Objeto de tipo TypePlate
- */
-export enum typePlate {
-  starter = 'Entrante',
-  firstPlate = 'Primer plato',
-  secondPlate = 'Segundo plato',
-  dessert = 'Postre'
-};
-
-/**
- *
+ * Implementa un plato con sus ingredientes y valores.
+ * @var name_ Nombre del plato.
+ * @var ingredients_ Ingredientes del plato.
+ * @var nutritionalComposition_ Valor nutricional del plato.
+ * @var predominantGroup_ Grupo de alimento predominante en el plato.
+ * @var price_ Precio total del plato.
  */
 export class Plate {
   private name_: string;
@@ -37,20 +32,32 @@ export class Plate {
 
   /** ******************************************************************** **/
 
+  /**
+   * Devuelve el nombre del plato.
+   */
   public get name(): string {
     return this.name_;
   }
 
+  /**
+   * Cambia el nombre del plato.
+   */
   public set name(newName: string) {
     this.name_ = newName;
   }
 
   /** ******************************************************************** **/
 
+  /**
+   * Devuelve los ingredientes del plato.
+   */
   public get ingredients(): Ingredient[] {
     return this.ingredients_;
   }
 
+  /**
+   * Cambia los ingredientes del plato.
+   */
   public set ingredients(newIngredients: Ingredient[]) {
     this.ingredients_ = newIngredients;
     this.nutritionalComposition_ = this.calculateNutritionalValue();
@@ -60,28 +67,43 @@ export class Plate {
 
   /** ******************************************************************** **/
 
+  /**
+   * Devuelve el valor nutricional del plato.
+   */
   public get nutritionalComposition(): MacroNutrients {
     return this.nutritionalComposition_;
   }
 
   /** ******************************************************************** **/
 
+  /**
+   * Devuelve el grupo de alimento predominante del plato.
+   */
   public get predominantGroup(): groupTypes {
     return this.predominantGroup_;
   }
 
   /** ******************************************************************** **/
 
+  /**
+   * Devuelve el precio del plato.
+   */
   public get price(): number {
     return this.price_;
   }
 
+  /**
+   * Cambia el precio del plato.
+   */
   public set price(newPrice: number) {
     this.price_ = newPrice;
   }
 
   /** ******************************************************************** **/
 
+  /**
+   * Añade un nuevo ingrediente al plato.
+   */
   public pushIngredients(newIngredients: Ingredient) {
     this.ingredients_.push(newIngredients);
     this.nutritionalComposition_ = this.calculateNutritionalValue();
@@ -89,6 +111,9 @@ export class Plate {
     this.price_ = this.calculatePrice();
   }
 
+  /**
+   * Calcula el valor nutricional del plato..
+   */
   private calculateNutritionalValue(): MacroNutrients {
     const returnValue = new MacroNutrients(0, 0, 0);
     this.ingredients_.forEach((ingredient) => {
@@ -102,6 +127,9 @@ export class Plate {
     return returnValue;
   }
 
+  /**
+   * calcula el grupo de alimento predominante del plato.
+   */
   private calculatePredominantGroup(): groupTypes {
     const auxGroups: groupTypes[] = [groupTypes.Meat, groupTypes.Fish,
       groupTypes.Eggs, groupTypes.Tofu, groupTypes.Nuts, groupTypes.Seeds,
@@ -114,6 +142,9 @@ export class Plate {
     return auxGroups[result.indexOf(Math.max.apply(null, result))];
   }
 
+  /**
+   * Calcula el precio del plato.
+   */
   private calculatePrice(): number {
     let price: number = 0;
     this.ingredients.forEach((ingredient) => {
