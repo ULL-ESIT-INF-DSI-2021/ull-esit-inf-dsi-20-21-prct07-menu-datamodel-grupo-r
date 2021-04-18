@@ -4,6 +4,22 @@
 export enum macroNutrients {carbohydrates, proteins, lipids};
 export type nutrientValues = [macroNutrients, number];
 
+/**
+ * Contiene los tipos de alimentos
+ */
+export enum typeAliment {
+  Meat = 'Carne',
+  Fish = 'Pescado',
+  Eggs = 'Huevos',
+  Tofu = 'Tofu',
+  Nuts = 'Frutos Secos',
+  Seeds = 'Semillas',
+  Legumes = 'Legumbres',
+  Vegetables = 'Vegetales',
+  Dairy = 'Lacteos',
+  Cereal = 'Cereales',
+  Fruit = 'Frutas'
+}
 
 /**
  * Implementa un ingrediente y almacena sus atributos básicos.
@@ -17,7 +33,7 @@ export type nutrientValues = [macroNutrients, number];
 export class Ingredient {
   private name_: string;
   private price_: number;
-  private group_: string;
+  private group_: typeAliment;
   private origin_: string;
   private nutrients_: nutrientValues[];
 
@@ -31,7 +47,7 @@ export class Ingredient {
    * @param origin Dirección de origen del alimento.
    * @param nutrients Cantidad de cada macronutriente.
    */
-  constructor(name: string, price: number, group: string, origin: string,
+  constructor(name: string, price: number, group: typeAliment, origin: string,
       nutrients: nutrientValues[]) {
     this.name_ = name;
     this.price_ = price;
@@ -79,7 +95,7 @@ export class Ingredient {
   /**
    * Devuelve el grupo del alimento.
    */
-  public get group(): string {
+  public get group(): typeAliment {
     return this.group_;
   }
 
@@ -87,7 +103,7 @@ export class Ingredient {
    * Cambia el grupo del alimento.
    * @param newGroup Nuevo grupo del alimento.
    */
-  public set group(newGroup: string) {
+  public set group(newGroup: typeAliment) {
     this.group_ = newGroup;
   }
 

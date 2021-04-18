@@ -1,13 +1,13 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Ingredient, nutrientValues, macroNutrients} from '../src/Ingredient';
+import {Ingredient, nutrientValues, macroNutrients, typeAliment} from '../src/Ingredient';
 
 const values: nutrientValues[] = [[macroNutrients.carbohydrates, 70],
   [macroNutrients.lipids, 20], [macroNutrients.proteins, 10]];
 const values2: nutrientValues[] = [[macroNutrients.carbohydrates, 50],
   [macroNutrients.lipids, 35.6], [macroNutrients.proteins, 15]];
 
-const chicken = new Ingredient("Pollo", 3.86, "Carne", "El Sauzal", values);
+const chicken = new Ingredient("Pollo", 3.86, typeAliment.Meat, "El Sauzal", values);
 
 
 describe('Funcionamiento básico de la clase ingredients.',
@@ -43,7 +43,7 @@ describe('Funcionamiento básico de la clase ingredients.',
       });
 
       it('Se puede modificar su grupo.', () => {
-        chicken.group = "Pescado";
+        chicken.group = typeAliment.Fish;
         expect(chicken.group).to.be.deep.equal("Pescado");
       });
 
