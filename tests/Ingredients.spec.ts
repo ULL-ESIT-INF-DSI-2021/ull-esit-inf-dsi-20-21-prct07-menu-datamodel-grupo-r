@@ -12,7 +12,7 @@ const chicken = new Ingredient("Pollo", 3.86, groupTypes.Meat, "El Sauzal",
     values);
 
 
-describe('Funcionamiento básico de la clase ingredients.',
+describe('Funcionamiento básico de la clase Ingredients.',
     () => {
       it('Se puede acceder a su nombre.', () => {
         expect(chicken.name).to.be.deep.equal("Pollo");

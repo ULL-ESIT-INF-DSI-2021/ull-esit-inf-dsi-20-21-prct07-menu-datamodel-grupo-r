@@ -28,14 +28,14 @@ export class MacroNutrients {
   /**
    * Devuelve los carbohidratos.
    */
-  public get getCarbohydrates(): number {
+  public get carbohydrates(): number {
     return this.carbohydrates_;
   }
 
   /**
    * Cambia el valor de los carbohidratos.
    */
-  public set setCarbohydrates(newCarbohydrates: number) {
+  public set carbohydrates(newCarbohydrates: number) {
     this.carbohydrates_ = newCarbohydrates;
   }
 
@@ -44,14 +44,14 @@ export class MacroNutrients {
   /**
    * Devuelve las proteínas.
    */
-  public get getProteins(): number {
+  public get proteins(): number {
     return this.proteins_;
   }
 
   /**
    * Cambia el valor de las proteínas.
    */
-  public set setProteins(newProteins: number) {
+  public set proteins(newProteins: number) {
     this.proteins_ = newProteins;
   }
 
@@ -60,14 +60,14 @@ export class MacroNutrients {
   /**
    * Devuelve los lípidos.
    */
-  public get getLipids(): number {
+  public get lipids(): number {
     return this.lipids_;
   }
 
   /**
    * Cambia el valor de los lípidos.
    */
-  public set setLipids(newLipids: number) {
+  public set lipids(newLipids: number) {
     this.lipids_ = newLipids;
   }
 }
