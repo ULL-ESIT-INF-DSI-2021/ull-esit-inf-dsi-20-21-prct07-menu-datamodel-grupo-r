@@ -4,25 +4,7 @@ import {MacroNutrients} from './models/MacroNutrients';
 //Entrantes
 
 
-export const pan = new Ingredient("Pan", 2, 260, "La Esperanza",
-    groupTypes.Cereal, new MacroNutrients(2.5, 59.2, 12.6));
-
-export const queso = new Ingredient("Queso", 10, 335, "Fuerteventura",
-    groupTypes.Diary, new MacroNutrients(20, 45, 9));
-
-export const almogrote = new Ingredient("Almogrote", 8, 50, "La Gomera",
-    groupTypes.Diary, new MacroNutrients(24, 60, 11.5));
-
-export const fuet = new Ingredient("Fuet", 5, 160, "Extremadura",
-    groupTypes.Meat, new MacroNutrients(30, 70, 18.1));
-
-export const boqueron = new Ingredient("Boquerones", 7, 150, "Las Galletas",
-    groupTypes.Vegetables, new MacroNutrients(24, 35, 7));
-
-export const papaslocas = new Ingredient("Papas locas", 5, 500, "La Guancha",
-    groupTypes.Vegetables.Meat.Diary, new MacroNutrients(57, 9, 18.1));
-
-export const mantequilla = new Ingredient("Mantequilla", 2, 39, "Asturias",
+illa", 2, 39, "Asturias",
     groupTypes.Diary, new MacroNutrients(57, 120, 26));
 
 export const alioli = new Ingredient("alioli", 2.6, 120, "La Laguna",
@@ -69,7 +51,7 @@ export const ensalada3 = new Ingredient("Ensalada de aguacate", 6, 310, "La Lagu
 export const rice = new Ingredient("Arroz", 2, 300, "La Laguna",
     groupTypes.Cereal, new MacroNutrients(57, 9, 18.1));
 
-export const chicken = new Ingredient("Pollo", 4, 300, "Tegueste
+export const chicken = new Ingredient("Pollo", 4, 300, "Tegueste"
     groupTypes.Meat, new MacroNutrients(11, 18, 7.3));
 
 export const CowMeat = new Ingredient("Carne", 4, 300, "La Laguna",
@@ -132,14 +114,13 @@ export const quesillo = new Ingredient("Quesillo", 2, 300, "La Laguna",
 
 //menus
 
-export const menu1 = new Menu("Menu1", [boqueron, sopa1, albondiga, tiramisu]);
-export const menu2 = new Menu("Menu2", [queso, sopa2, carne, sorbeteLimon]);
-export const menu3 = new Menu("Menu3", [almogrote, sopa3, pollo, gelatina]);
-export const menu4 = new Menu("Menu4", [fuet, potaje, conejo, quesillo]);
+export const menu1 = new Menu("Menu1", [boqueron, sopa1, albondigas, tiramisu]);
+export const menu2 = new Menu("Menu2", [queso, sopa2, chicken, sorbete]);
+export const menu3 = new Menu("Menu3", [almogrote, sopa3, CowMeat, gelatina]);
+export const menu4 = new Menu("Menu4", [fuet, potaje, rabbit, quesillo]);
 export const menu5 = new Menu("Menu5", [alioli, ensalada, pasta, flan]);
 export const menu6 = new Menu("Menu6", [jamonserrano, salmorejo, pescado, helado]);
 export const menu7 = new Menu("Menu7", [tomate, garbanzos, calabacin, tarta]);
-export const menu8 = new Menu("Menu8", [papaslocas, ensalada2, berenjena, macedonia]);
+export const menu8 = new Menu("Menu8", [papaslocas, ensalada2, berenjenas, macedonia]);
 export const menu9 = new Menu("Menu9", [mantequilla, ensalada3, tofu, principeAlberto]);
-export const menu10 = new Menu("Menu10", [pan, gazpacho, pasta, gelatina]);
-
+export const menu10 = new Menu("Menu1", [pan, gazpacho, pasta, gelatina]);
