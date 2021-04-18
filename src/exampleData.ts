@@ -5,7 +5,25 @@ import {Menu} from './models/Menu';
 //Entrantes
 
 
-illa", 2, 39, "Asturias",
+export const pan = new Ingredient("Pan", 2, 260, "La Esperanza",
+    groupTypes.Cereal, new MacroNutrients(2.5, 59.2, 12.6));
+
+export const queso = new Ingredient("Queso", 10, 335, "Fuerteventura",
+    groupTypes.Diary, new MacroNutrients(20, 45, 9));
+
+export const almogrote = new Ingredient("Almogrote", 8, 50, "La Gomera",
+    groupTypes.Diary, new MacroNutrients(24, 60, 11.5));
+
+export const fuet = new Ingredient("Fuet", 5, 160, "Extremadura",
+    groupTypes.Meat, new MacroNutrients(30, 70, 18.1));
+
+export const boqueron = new Ingredient("Boquerones", 7, 150, "Las Galletas",
+    groupTypes.Vegetables, new MacroNutrients(24, 35, 7));
+
+export const papaslocas = new Ingredient("Papas locas", 5, 500, "La Guancha",
+    groupTypes.Vegetables.Meat.Diary, new MacroNutrients(57, 9, 18.1));
+
+export const mantequilla = new Ingredient("Mantequilla", 2, 39, "Asturias",
     groupTypes.Diary, new MacroNutrients(57, 120, 26));
 
 export const alioli = new Ingredient("alioli", 2.6, 120, "La Laguna",
