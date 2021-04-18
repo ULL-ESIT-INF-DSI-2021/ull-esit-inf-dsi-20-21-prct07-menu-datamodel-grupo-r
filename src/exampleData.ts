@@ -141,5 +141,5 @@ export const menu6 = new Menu("Menu6", [jamonserrano, salmorejo, pescado, helado
 export const menu7 = new Menu("Menu7", [tomate, garbanzos, calabacin, tarta]);
 export const menu8 = new Menu("Menu8", [papaslocas, ensalada2, berenjena, macedonia]);
 export const menu9 = new Menu("Menu9", [mantequilla, ensalada3, tofu, principeAlberto]);
-export const menu10 = new Menu("Menu1", [pan, gazpacho, pasta, gelatina]);
+export const menu10 = new Menu("Menu10", [pan, gazpacho, pasta, gelatina]);
 
