@@ -1,6 +1,7 @@
 import {Menu} from './Menu';
 import {Plate} from './Plate';
 
+
 /**
  * Contiene la carta de un restaurante.
  * @var plates_ Platos individuales de la carta.

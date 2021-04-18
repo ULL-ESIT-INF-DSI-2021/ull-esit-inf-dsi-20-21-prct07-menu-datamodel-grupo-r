@@ -1,8 +1,8 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Ingredient, groupTypes} from '../src/Ingredient';
-import {MacroNutrients} from '../src/MacroNutrients';
-import {Plate, plateTypes} from '../src/Plate';
+import {Ingredient, groupTypes} from '../src/models/Ingredient';
+import {MacroNutrients} from '../src/models/MacroNutrients';
+import {Plate, plateTypes} from '../src/models/Plate';
 
 const chickenNutrients = new MacroNutrients(60, 40, 20);
 const salmonNutrients = new MacroNutrients(21, 44, 22);

@@ -1,7 +1,7 @@
 import low from 'lowdb';
 import FileSync from 'lowdb/adapters/FileSync';
 
-let db;
+let db: low.LowdbSync<any>;
 
 export function createDatabase() {
   const adapter = new FileSync('db.json');

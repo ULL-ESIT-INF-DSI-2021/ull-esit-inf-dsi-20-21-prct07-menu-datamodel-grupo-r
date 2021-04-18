@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import {MacroNutrients} from '../src/MacroNutrients';
+import {MacroNutrients} from '../src/models/MacroNutrients';
 
 const nutrients = new MacroNutrients(60, 20, 13);
 
