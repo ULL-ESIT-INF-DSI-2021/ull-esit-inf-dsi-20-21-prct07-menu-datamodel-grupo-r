@@ -59,6 +59,9 @@ export class Menu {
    */
   public set plates(newPlates: Plate[]) {
     this.plates_ = newPlates;
+    this.price_ = this.calculatePrice();
+    this.nutrients_ = this.calculateNutritionalValue();
+    this.groups_ = this.calculateGroups();
   }
 
   /** ******************************************************************** **/
@@ -70,13 +73,6 @@ export class Menu {
     return this.price_;
   }
 
-  /**
-   * Cambia el precio del menú.
-   */
-  public set price(newPrice: number) {
-    this.price_ = newPrice;
-  }
-
   /** ******************************************************************** **/
 
   /**
@@ -86,13 +82,6 @@ export class Menu {
     return this.nutrients_;
   }
 
-  /**
-   * Cambia los nutrientes del menú.
-   */
-  public set nutrients(newNutrients: MacroNutrients) {
-    this.nutrients_ = newNutrients;
-  }
-
   /** ******************************************************************** **/
 
   /**
@@ -100,13 +89,6 @@ export class Menu {
    */
   public get groups(): groupTypes[] {
     return this.groups_;
-  }
-
-  /**
-   * Cambia los grupos alimenticios del menú.
-   */
-  public set groups(newGroups: groupTypes[]) {
-    this.groups_ = newGroups;
   }
 
   /** ******************************************************************** **/
