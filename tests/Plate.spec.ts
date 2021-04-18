@@ -45,5 +45,12 @@ describe('Funcionamiento básico de la clase Plates.',
         expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient2);
         expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
         expect(firstPlate.price).to.be.equal(21.875);
+        firstPlate.ingredients = chickenIngredients;
+        expect(firstPlate.ingredients).to.be.deep.equal(chickenIngredients);
+        expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient2);
+        expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
+        expect(firstPlate.price).to.be.equal(21.875);
+        firstPlate.price = 32;
+        expect(firstPlate.price).to.be.equal(32);
       });
     });
