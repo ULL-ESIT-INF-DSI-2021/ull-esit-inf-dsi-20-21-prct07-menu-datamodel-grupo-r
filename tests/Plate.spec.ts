@@ -31,6 +31,7 @@ describe('Funcionamiento básico de la clase Plates.',
     () => {
       it('Se puede acceder a sus atributos.', () => {
         expect(firstPlate.name).to.be.deep.equal("Pollo con naranja y manzana");
+        expect(firstPlate.type).to.be.deep.equal(plateTypes.firstPlate);
         expect(firstPlate.ingredients).to.be.deep.equal(chickenIngredients);
         expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient);
         expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
@@ -40,7 +41,9 @@ describe('Funcionamiento básico de la clase Plates.',
       it('Se pueden modificar sus atributos.', () => {
         firstPlate.name = "Pollo con naranja, manzana y salmon";
         firstPlate.pushIngredients(salmon);
+        firstPlate.type = plateTypes.secondPlate;
         expect(firstPlate.name).to.be.deep.equal("Pollo con naranja, manzana y salmon");
+        expect(firstPlate.type).to.be.deep.equal(plateTypes.secondPlate);
         expect(firstPlate.ingredients).to.be.deep.equal(chickenIngredients2);
         expect(firstPlate.nutritionalComposition).to.be.deep.equal(auxNutrient2);
         expect(firstPlate.predominantGroup).to.be.deep.equal(groupTypes.Fruit);
