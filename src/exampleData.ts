@@ -65,3 +65,15 @@ export const gelatina = new Ingredient("Gelatina", 2, 300, "La Laguna",
 
 export const quesillo = new Ingredient("Quesillo", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(195, 8, 55.8));
+
+//menus
+export const menu1 = new Menu("Menu1", entrante, primerplato, "Albondiga", "Tiramisu");
+export const menu2 = new Menu("Menu2", entrante, primerplato, "Carne", "sorbeteLimon");
+export const menu3 = new Menu("Menu3", entrante, primerplato, "Pollo", "Gelatina");
+export const menu4 = new Menu("Menu4", entrante, primerplato, "Conejo", "Quesillo");
+export const menu5 = new Menu("Menu5", entrante, primerplato, "Pasta", "Flan");
+export const menu6 = new Menu("Menu6", entrante, primerplato, "Pescado", "Helado");
+export const menu7 = new Menu("Menu7", entrante, primerplato, "Calabacin", "Tarta");
+export const menu8 = new Menu("Menu8", entrante, primerplato, "Berenjena", "Macedonia");
+export const menu9 = new Menu("Menu9", entrante, primerplato, "Tofu", "PrincipeAlberto");
+export const menu10 = new Menu("Menu10", entrante, primerplato, "Quinoa", "Mouse");
