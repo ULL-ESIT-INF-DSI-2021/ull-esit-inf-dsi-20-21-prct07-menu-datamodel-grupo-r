@@ -189,3 +189,4 @@ export class Plate {
     console.log(`${this.name_}`);
   }
 };
+

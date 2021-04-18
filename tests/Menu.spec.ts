@@ -39,6 +39,7 @@ const dessert2 = new Plate("Tarta de manzana",
     plateTypes.secondPlate, [cake, tomato]);
 
 const menu = new Menu("Menú del día", [pollo, salad, dessert]);
+const menu2 = new Menu("Menú del día", [pollo, salad, dessert]);
 
 describe('Funcionamiento básico de la clase Menu.',
     () => {
@@ -62,5 +63,8 @@ describe('Funcionamiento básico de la clase Menu.',
         expect(menu.groups).to.be.deep.equal(["Carne", "Frutas", "Legumbres",
           "Legumbres", "Huevos", "Legumbres"]);
       });
-    });
 
+      it('Se puede imprimir un objeto Menu.', () => {
+          expect(menu2.print());
+      });
+    });

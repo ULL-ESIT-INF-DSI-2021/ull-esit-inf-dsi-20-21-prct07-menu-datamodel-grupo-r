@@ -58,4 +58,9 @@ describe('Funcionamiento básico de la clase Plates.',
         firstPlate.price = 32;
         expect(firstPlate.price).to.be.equal(32);
       });
+
+      it('Se puede imprimir un objeto Plate.', () => {
+        expect(firstPlate.print());
+        });
     });
+
