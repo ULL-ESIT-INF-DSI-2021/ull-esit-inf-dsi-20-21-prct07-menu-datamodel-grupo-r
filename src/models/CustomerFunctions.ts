@@ -1,5 +1,7 @@
 import inquirer from 'inquirer';
-import {carta} from '../index';
+import {carta, pedido} from '../index';
+import * as data from '../exampleData';
+import {Menu} from './Menu';
 
 /**
  * Comandos del cliente
@@ -14,6 +16,38 @@ enum CustomerCommands {
   exit = "Salir",
 }
 
+/**
+ * Comandos del cliente
+ */
+enum SelectMenu {
+  menu1 = "Menu 1",
+  menu2 = "Menu 2",
+  menu3 = "Menu 3",
+  menu4 = "Menu 4",
+  menu5 = "Menu 5",
+  menu6 = "Menu 6",
+  menu7 = "Menu 7",
+  menu8 = "Menu 8",
+  menu9 = "Menu 9",
+  menu10 = "Menu 10",
+};
+
+/**
+ * Comandos del cliente
+ */
+ enum SelectPlate {
+  plato1 = "Plato 1",
+  plato2 = "Plato 2",
+  plato3 = "Plato 3",
+  plato4 = "Plato 4",
+  plato5 = "Plato 5",
+  plato6 = "Plato 6",
+  plato7 = "Plato 7",
+  plato8 = "Plato 8",
+  plato9 = "Plato 9",
+  plato10 = "Plato 10",
+};
+
 
 export class CustomerFunctions {
   /**
@@ -27,6 +61,30 @@ export class CustomerFunctions {
       message: 'Bienvenido a nuestro restaurante',
       choices: Object.values(CustomerCommands),
     });
+
+    switch (answers["command"]) {
+      case CustomerCommands.showLetter: {
+        this.customerShowLetter();
+      }
+      case CustomerCommands.addMenu: {
+        this.customerAddMenu();
+      }
+      case CustomerCommands.removeMenu: {
+        this.customerRemoveMenu();
+      }
+      case CustomerCommands.addPlate: {
+        this.customerAddPlate();
+      }
+      case CustomerCommands.removePlate: {
+        this.customerRemovePlate();
+      }
+      case CustomerCommands.showCommand: {
+        this.customerShowCommand();
+      }
+      case CustomerCommands.exit: {
+        this.customerExit();
+      }
+    }
   }
 
   /**
@@ -35,12 +93,12 @@ export class CustomerFunctions {
   public async customerShowLetter() {
     console.clear();
     carta.print();
-    const answers = await inquirer.prompt({
-      type: 'list',
-      name: 'command',
-      message: 'Comandos del chef',
-      choices: Object.values(CustomerCommands),
+    inquirer.prompt({
+      type: 'input',
+      name: 'continue',
+      message: 'Pulse enter para continuar',
     });
+    this.promptCustomer();
   }
 
   /**
@@ -51,9 +109,43 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Añadir menú al pedido',
-      // choices: Object.values(CustomerCommands),
+      message: 'Escoja un menú',
+      choices: Object.values(SelectMenu),
     });
+
+    switch (answers["command"]) {
+      case SelectMenu.menu1: {
+        pedido.push(data.menu1);
+      }
+      case SelectMenu.menu2: {
+        pedido.push(data.menu2);
+      }
+      case SelectMenu.menu3: {
+        pedido.push(data.menu3);
+      }
+      case SelectMenu.menu4: {
+        pedido.push(data.menu4);
+      }
+      case SelectMenu.menu5: {
+        pedido.push(data.menu5);
+      }
+      case SelectMenu.menu6: {
+        pedido.push(data.menu6);
+      }
+      case SelectMenu.menu7: {
+        pedido.push(data.menu7);
+      }
+      case SelectMenu.menu8: {
+        pedido.push(data.menu8);
+      }
+      case SelectMenu.menu9: {
+        pedido.push(data.menu9);
+      }
+      case SelectMenu.menu10: {
+        pedido.push(data.menu10);
+      }
+    }
+    this.promptCustomer();
   }
 
   /**
@@ -77,9 +169,43 @@ export class CustomerFunctions {
     const answers = await inquirer.prompt({
       type: 'list',
       name: 'command',
-      message: 'Añadir plato al pedido',
-      // choices: Object.values(CustomerCommands),
+      message: 'Escoja un menú',
+      choices: Object.values(SelectMenu),
     });
+
+    switch (answers["command"]) {
+      case SelectPlate.plato1: {
+        pedido.push(data.plato1);
+      }
+      case SelectPlate.plato2: {
+        pedido.push(data.plato2);
+      }
+      case SelectPlate.plato3: {
+        pedido.push(data.plato3);
+      }
+      case SelectPlate.plato4: {
+        pedido.push(data.plato4);
+      }
+      case SelectPlate.plato5: {
+        pedido.push(data.plato5);
+      }
+      case SelectPlate.plato6: {
+        pedido.push(data.plato6);
+      }
+      case SelectPlate.plato7: {
+        pedido.push(data.plato7);
+      }
+      case SelectPlate.plato8: {
+        pedido.push(data.plato8);
+      }
+      case SelectPlate.plato9: {
+        pedido.push(data.plato9);
+      }
+      case SelectPlate.plato10: {
+        pedido.push(data.plato10);
+      }
+    }
+    this.promptCustomer();
   }
 
   /**
@@ -100,12 +226,14 @@ export class CustomerFunctions {
    */
   public async customerShowCommand() {
     console.clear();
-    const answers = await inquirer.prompt({
-      type: 'list',
-      name: 'command',
-      message: 'Mostrando el pedido',
-      // choices: Object.values(CustomerCommands),
+    console.log(`Pedido: `);
+    pedido.forEach((item) => item.print());
+    inquirer.prompt({
+      type: 'input',
+      name: 'continue',
+      message: 'Pulse enter para continuar',
     });
+    this.promptCustomer();
   }
 
   /**

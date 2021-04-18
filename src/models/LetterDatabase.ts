@@ -27,5 +27,9 @@ export class LetterDatabase extends MenuLetter {
       this.dataBase_.set('menus', this.menus_).write();
     }
   }
+
+  public addMenu(menu: Menu) {
+    
+  }
 }
 
