@@ -103,11 +103,15 @@ export class Plate {
   }
 
   private calculatePredominantGroup(): groupTypes {
-    /* return this.ingredients_.sort((a, b) =>
-      this.ingredients_.filter((v) => v===a).length -
-        this.ingredients_.filter((v) => v===b).length,
-    ).pop().group; */
-    return groupTypes.Fruit;
+    const auxGroups: groupTypes[] = [groupTypes.Meat, groupTypes.Fish,
+      groupTypes.Eggs, groupTypes.Tofu, groupTypes.Nuts, groupTypes.Seeds,
+      groupTypes.Legumes, groupTypes.Vegetables, groupTypes.Dairy,
+      groupTypes.Cereal, groupTypes.Fruit];
+    const result: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    this.ingredients_.forEach((ingredient) => {
+      result[auxGroups.indexOf(ingredient.group)]++;
+    });
+    return auxGroups[result.indexOf(Math.max.apply(null, result))];
   }
 
   private calculatePrice(): number {
