@@ -62,6 +62,8 @@ export const salmorejo = new Ingredient("Salmorejo", 4, 260, "La Laguna",
 export const ensalada2 = new Ingredient("Ensalada de pasta", 6, 310, "La Laguna",
     groupTypes.Vegetables.Cereal, new MacroNutrients(27, 26, 16));
 
+export const ensalada3 = new Ingredient("Ensalada de aguacate", 6, 310, "La Laguna",
+    groupTypes.Vegetables.Cereal, new MacroNutrients(27, 26, 16));
 
 // alimentos segundo plato
 export const rice = new Ingredient("Arroz", 2, 300, "La Laguna",
@@ -129,13 +131,15 @@ export const quesillo = new Ingredient("Quesillo", 2, 300, "La Laguna",
     groupTypes.Dairy, new MacroNutrients(195, 8, 55.8));
 
 //menus
-export const menu1 = new Menu("Menu1", entrante, primerplato, "Albondiga", "Tiramisu");
-export const menu2 = new Menu("Menu2", entrante, primerplato, "Carne", "sorbeteLimon");
-export const menu3 = new Menu("Menu3", entrante, primerplato, "Pollo", "Gelatina");
-export const menu4 = new Menu("Menu4", entrante, primerplato, "Conejo", "Quesillo");
-export const menu5 = new Menu("Menu5", entrante, primerplato, "Pasta", "Flan");
-export const menu6 = new Menu("Menu6", entrante, primerplato, "Pescado", "Helado");
-export const menu7 = new Menu("Menu7", entrante, primerplato, "Calabacin", "Tarta");
-export const menu8 = new Menu("Menu8", entrante, primerplato, "Berenjena", "Macedonia");
-export const menu9 = new Menu("Menu9", entrante, primerplato, "Tofu", "PrincipeAlberto");
-export const menu10 = new Menu("Menu10", entrante, primerplato, "Quinoa", "Mouse");
+
+export const menu1 = new Menu("Menu1", [boqueron, sopa1, albondiga, tiramisu]);
+export const menu2 = new Menu("Menu2", [queso, sopa2, carne, sorbeteLimon]);
+export const menu3 = new Menu("Menu3", [almogrote, sopa3, pollo, gelatina]);
+export const menu4 = new Menu("Menu4", [fuet, potaje, conejo, quesillo]);
+export const menu5 = new Menu("Menu5", [alioli, ensalada, pasta, flan]);
+export const menu6 = new Menu("Menu6", [jamonserrano, salmorejo, pescado, helado]);
+export const menu7 = new Menu("Menu7", [tomate, garbanzos, calabacin, tarta]);
+export const menu8 = new Menu("Menu8", [papaslocas, ensalada2, berenjena, macedonia]);
+export const menu9 = new Menu("Menu9", [mantequilla, ensalada3, tofu, principeAlberto]);
+export const menu10 = new Menu("Menu1", [pan, gazpacho, pasta, gelatina]);
+
