@@ -92,7 +92,7 @@ export class CustomerFunctions {
    */
   public async customerShowLetter() {
     console.clear();
-    // carta.print();
+    carta.print();
     inquirer.prompt({
       type: 'input',
       name: 'continue',
