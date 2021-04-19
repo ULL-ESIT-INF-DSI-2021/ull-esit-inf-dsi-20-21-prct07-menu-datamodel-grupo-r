@@ -699,6 +699,8 @@ En cuanto a las funciones, se han realizado las siguientes:
 
 En esta práctica hemos diseñado e impementado un menú para cualquier restaurante. En cuanto al diseño del menú, tuvimos que empezar buscando los ingredientes de cada plato para poder crearlo, así mismo su composición nutricional y su precio correspondiente. Creamos varios menús predeterminados para luego tener la opción de que el consumidor crease el suyo propio. En cuanto al funcionamiento, tuvimos que usar *Inquirer.js*, que es una interfaz de línea de comandos integrable para *Node.js* y *lowdb*; fue una parte delicada de la práctica debido a que al usarlo por primera vez, se nos dificultó un poco más. Sin embargo, aprendimos a usar ambas cosas gratificantemente.
 
+Adicionalmente hemos tenido problemas con la ejeciciones pues nos da un error que no hemos sabido solucionar. Nos indica que hay 11 puertos escuchando y no puede continuar la ejecución pues supondría un peligro para la memoria. Nuestra idea es que dicho fallo viene del async de inquirer, pues estará esuchando en variaos puertos a la vez y produce un error. Sin embargo como a veces si nos funciona y otras no, no sabemos muy bien dónde está el error y como solucionarlo.
+
 
 ## Bibliografia
 - [Práctica 7 - Modelo de datos de un sistema que permite el diseño de menús](https://ull-esit-inf-dsi-2021.github.io/prct07-menu-dataModel/)
